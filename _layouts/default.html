@@ -23,12 +23,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6464921081676309" crossorigin="anonymous"></script>
 </head>
 <body>
   {% include header.html %}
-  <main class="main-wrap">
-    {{ content }}
-  </main>
+
+  <!-- 상단 배너 광고 -->
+  <div class="ad-top-wrap">
+    <div class="ad-top-inner">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-6464921081676309"
+           data-ad-slot="8621795850"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </div>
+
+  <!-- 본문 + 사이드바 -->
+  <div class="page-layout">
+    <main class="main-wrap">
+      {{ content }}
+    </main>
+
+    <!-- 사이드바 광고 (sticky) -->
+    <aside class="ad-sidebar">
+      <div class="ad-sidebar-inner">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6464921081676309"
+             data-ad-slot="7048523029"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </aside>
+  </div>
+
   {% include footer.html %}
 </body>
 </html>
