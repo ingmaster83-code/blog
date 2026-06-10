@@ -195,7 +195,7 @@ kit: "{kit}"
 
 """
     filepath.write_text(front_matter + data["body"], encoding="utf-8")
-    print(f"  ✅ {filepath.name}")
+    print(f"  [저장] {filepath.name}")
     return filepath
 
 # ──── Git Push ────────────────────────────────────────────────────────────────
@@ -206,7 +206,7 @@ def git_push(count: int):
     subprocess.run(["git", "-C", repo, "add", "_posts/"], check=True)
     subprocess.run(["git", "-C", repo, "commit", "-m", msg], check=True)
     subprocess.run(["git", "-C", repo, "push"], check=True)
-    print(f"\n🚀 GitHub push 완료: {msg}")
+    print(f"\n[push 완료] {msg}")
 
 # ──── Main ────────────────────────────────────────────────────────────────────
 
@@ -222,7 +222,7 @@ def main():
     generated = 0
 
     if args.keyword:
-        print(f"\n📝 '{args.keyword}' 생성 중...")
+        print(f"\n[생성중] '{args.keyword}' ...")
         data = generate_post(args.keyword, args.kit)
         save_post(data, args.keyword, args.kit)
         generated = 1
@@ -240,11 +240,11 @@ def main():
         # 이미 생성된 키워드는 제외 (keywords.json의 "done" 필드)
         pending = [k for k in pool if not k.get("done")]
         if not pending:
-            print("✅ 모든 키워드가 이미 생성되었습니다.")
+            print("모든 키워드가 이미 생성되었습니다.")
             return
 
         selected = random.sample(pending, min(args.batch, len(pending)))
-        print(f"\n📝 {len(selected)}개 포스트 생성 시작...\n")
+        print(f"\n{len(selected)}개 포스트 생성 시작...\n")
 
         for item in selected:
             kw  = item["keyword"]
@@ -257,13 +257,13 @@ def main():
                 item["done"] = True
                 generated += 1
             except Exception as e:
-                print(f"  ❌ 실패: {e}")
+                print(f"  [실패] {e}")
 
         # done 상태 저장
         with open(KEYWORDS_FILE, "w", encoding="utf-8") as f:
             json.dump(all_keywords, f, ensure_ascii=False, indent=2)
 
-        print(f"\n✅ {generated}개 완료")
+        print(f"\n{generated}개 완료")
 
     else:
         parser.print_help()
