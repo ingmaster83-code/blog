@@ -77,7 +77,7 @@ def generate_post(keyword: str, kit: str) -> dict:
     style     = random.choice(PROMPT_STYLES)
     structure = random.choice(STRUCTURES)
 
-    prompt = f"""당신은 SEO에 최적화된 한국어 블로그 글을 작성하는 전문 작가입니다.
+    prompt = f"""당신은 구글 SEO 전문가이자 한국어 블로그 작가입니다.
 
 [이번 글 정보]
 타겟 키워드: {keyword}
@@ -85,21 +85,52 @@ def generate_post(keyword: str, kit: str) -> dict:
 작성 스타일: {style}
 글 구조: {structure}
 
-[작성 조건]
-- 제목: 타겟 키워드를 앞쪽에 포함, 30~60자, 이모지 금지
-- 본문: 마크다운 형식, 1200~1800자, ## 소제목 사용
-- URL은 글 구조 첫 소개 위치와 마무리 위치에 각 1회씩 총 2회 포함
-- URL은 반드시 마크다운 링크 형식으로 작성: [WooaQR 무료 사용하기](https://qrkit.wooahouse.com) 처럼
-- URL을 단독 줄에 텍스트만 쓰는 것 금지, 반드시 링크 문법 사용
-- 메타 설명: 120~160자, 타겟 키워드 포함
-- 태그: 5~8개 쉼표 구분
+[SEO 작성 조건]
 
-[출력 형식 - 반드시 이 형식만]
+■ 제목 (30~60자)
+  - 타겟 키워드를 제목 앞쪽에 배치
+  - "무료", "방법", "쉽게", "바로" 같은 클릭 유도 단어 포함
+  - 이모지·특수기호 금지
+
+■ 본문 (마크다운, 1800~2500자)
+  - 첫 문단 70자 이내에 타겟 키워드 자연스럽게 포함 (구글 가중치 높음)
+  - ## 소제목에 키워드 변형·연관어 포함 (예: "PDF 합치기 방법", "무료 온라인 병합 도구")
+  - ### 하위 소제목으로 세부 단계 구조화
+  - 타겟 키워드의 연관 검색어(LSI) 5개 이상 본문에 자연스럽게 분산 배치
+  - URL은 첫 소개와 마무리에 마크다운 링크로 각 1회씩 총 2회
+    형식 예시: [WooaPDF 무료로 사용하기]({kit_url})
+  - URL을 단독 텍스트로 쓰는 것 절대 금지 — 반드시 링크 문법 사용
+  - 결론 문단에서 타겟 키워드 재언급
+
+■ 메타 설명 (120~160자) — 구글 검색 결과에 노출되는 문장
+  - 타겟 키워드를 앞부분에 배치
+  - 구체적 혜택 수치 포함 ("설치 불필요", "30초", "무료" 등)
+  - 클릭 유도 문구로 마무리 ("지금 바로 해보세요", "무료로 시작하세요" 등)
+  - 브랜드명({kit_name}) 포함
+
+■ FAQ (3개 — 구글 People Also Ask 최적화)
+  - 실제 사용자가 검색할 법한 구체적인 질문
+  - 각 답변은 2~3문장, 핵심만 간결하게
+  - 마지막 질문은 반드시: "파일이 인터넷에 업로드되나요?"
+    답변: "아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보 걱정 없이 안전하게 사용할 수 있습니다."
+
+■ 태그 (5~8개, 쉼표 구분)
+  - 타겟 키워드 + 연관 검색어 위주
+
+[출력 형식 — 반드시 이 형식만, 순서 변경 금지]
 [TITLE]제목[/TITLE]
 [DESC]메타 설명[/DESC]
 [TAGS]태그1,태그2,태그3[/TAGS]
+[FAQ]
+Q: 질문1?
+A: 답변1.
+Q: 질문2?
+A: 답변2.
+Q: 파일이 인터넷에 업로드되나요?
+A: 아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보 걱정 없이 안전하게 사용할 수 있습니다.
+[/FAQ]
 [BODY]
-마크다운 본문
+마크다운 본문 (FAQ 내용 중복 작성 금지)
 [/BODY]"""
 
     resp = requests.post(
@@ -116,6 +147,7 @@ def generate_post(keyword: str, kit: str) -> dict:
     title_m = re.search(r"\[TITLE\](.*?)\[/TITLE\]", raw, re.DOTALL)
     desc_m  = re.search(r"\[DESC\](.*?)\[/DESC\]",   raw, re.DOTALL)
     tags_m  = re.search(r"\[TAGS\](.*?)\[/TAGS\]",   raw, re.DOTALL)
+    faq_m   = re.search(r"\[FAQ\](.*?)\[/FAQ\]",     raw, re.DOTALL)
     body_m  = re.search(r"\[BODY\](.*?)\[/BODY\]",   raw, re.DOTALL)
 
     if not all([title_m, desc_m, tags_m, body_m]):
@@ -125,8 +157,17 @@ def generate_post(keyword: str, kit: str) -> dict:
         "title": title_m.group(1).strip(),
         "desc":  desc_m.group(1).strip(),
         "tags":  tags_m.group(1).strip(),
+        "faq":   parse_faq(faq_m.group(1)) if faq_m else [],
         "body":  body_m.group(1).strip(),
     }
+
+def parse_faq(faq_text: str) -> list:
+    """Q:/A: 형식의 FAQ 블록을 파싱해서 리스트로 반환"""
+    items = []
+    pairs = re.findall(r'Q:\s*(.+?)\nA:\s*(.+?)(?=\nQ:|\Z)', faq_text.strip(), re.DOTALL)
+    for q, a in pairs:
+        items.append({"q": q.strip(), "a": a.strip()})
+    return items
 
 def linkify_urls(text: str) -> str:
     """단독 줄에 있는 bare URL을 마크다운 링크로 변환"""
@@ -148,6 +189,17 @@ def save_post(data: dict, keyword: str, kit: str) -> str:
 
     body = linkify_urls(data["body"])
     tags_yaml = "\n".join(f'  - "{t.strip()}"' for t in data["tags"].split(",") if t.strip())
+
+    faq_yaml = ""
+    if data.get("faq"):
+        faq_lines = ["faq:"]
+        for item in data["faq"]:
+            q = item["q"].replace('"', "'")
+            a = item["a"].replace('"', "'")
+            faq_lines.append(f'  - q: "{q}"')
+            faq_lines.append(f'    a: "{a}"')
+        faq_yaml = "\n" + "\n".join(faq_lines)
+
     content = f"""---
 layout: post
 title: "{data['title'].replace('"', "'")}"
@@ -157,7 +209,7 @@ categories:
   - "{kit}"
 tags:
 {tags_yaml}
-kit: "{kit}"
+kit: "{kit}"{faq_yaml}
 ---
 
 {body}"""

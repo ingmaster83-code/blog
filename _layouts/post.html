@@ -37,6 +37,37 @@ layout: default
 
   {% include cta.html %}
 
+  {% if page.faq %}
+  <div class="faq-section">
+    <h2>자주 묻는 질문</h2>
+    {% for item in page.faq %}
+    <details>
+      <summary>{{ item.q }}</summary>
+      <p>{{ item.a }}</p>
+    </details>
+    {% endfor %}
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {% for item in page.faq %}
+      {
+        "@type": "Question",
+        "name": "{{ item.q | escape }}",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "{{ item.a | escape }}"
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+
   <div class="post-nav">
     <a href="{{ '/' | relative_url }}" class="back-link">← 전체 글 목록</a>
   </div>

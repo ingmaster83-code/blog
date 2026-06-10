@@ -382,6 +382,58 @@ img { max-width: 100%; height: auto; }
   font-size: .8rem;
 }
 
+/* ===== FAQ Section ===== */
+.faq-section {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.faq-section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 18px;
+}
+.faq-section details {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.faq-section details[open] { border-color: var(--green); }
+.faq-section summary {
+  padding: 14px 18px;
+  font-weight: 600;
+  font-size: .95rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark);
+  user-select: none;
+}
+.faq-section summary::-webkit-details-marker { display: none; }
+.faq-section summary::after {
+  content: "+";
+  font-size: 1.2rem;
+  color: var(--green);
+  font-weight: 400;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+.faq-section details[open] summary::after { content: "−"; }
+.faq-section details p {
+  padding: 0 18px 16px;
+  color: #374151;
+  font-size: .93rem;
+  line-height: 1.75;
+  margin: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
 /* ===== Post Nav ===== */
 .post-nav {
   margin-top: 20px;
