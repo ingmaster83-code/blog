@@ -1,0 +1,77 @@
+- key: pdf
+  name: WooaPDF
+  emoji: "📄"
+  desc: "PDF 변환, 병합, 압축, 분할, 페이지 추출까지 — 설치 없이 브라우저에서 바로"
+  url: https://pdfkit.wooahouse.com
+
+- key: 이미지
+  name: WooaImage
+  emoji: "🖼️"
+  desc: "이미지 압축, 변환, 리사이즈, 자르기 — JPG·PNG·WebP 자유롭게"
+  url: https://imagekit.wooahouse.com
+
+- key: qr
+  name: WooaQR
+  emoji: "🔲"
+  desc: "QR코드 무료 생성 — URL, 텍스트, 연락처, Wi-Fi 모두 지원"
+  url: https://qrkit.wooahouse.com
+
+- key: 텍스트
+  name: WooaText
+  emoji: "📝"
+  desc: "글자수 세기, 줄바꿈 변환, 대소문자, 중복 제거 등 텍스트 도구 모음"
+  url: https://textkit.wooahouse.com
+
+- key: 색상
+  name: WooaColor
+  emoji: "🎨"
+  desc: "색상 코드 변환, 팔레트 추출, 색상 피커 — 디자이너를 위한 무료 도구"
+  url: https://colorkit.wooahouse.com
+
+- key: 계산
+  name: WooaCalc
+  emoji: "🧮"
+  desc: "단위 변환, 날짜 계산, 세금 계산 등 생활 계산기 모음"
+  url: https://calckit.wooahouse.com
+
+- key: ocr
+  name: WooaOCR
+  emoji: "🔍"
+  desc: "이미지에서 텍스트 추출 — 사진·스캔 문서를 바로 복사 가능한 텍스트로"
+  url: https://wooaocr.wooahouse.com
+
+- key: 오디오
+  name: WooaAudio
+  emoji: "🎵"
+  desc: "오디오 변환, 자르기, 속도 조절, 볼륨 조정 — MP3·WAV·M4A 지원"
+  url: https://wooaaudio.wooahouse.com
+
+- key: 동영상
+  name: WooaVideo
+  emoji: "📹"
+  desc: "동영상 변환, 압축, 자르기, GIF 변환 — 설치 없이 브라우저에서"
+  url: https://wooavideo.wooahouse.com
+
+- key: 폰트
+  name: FontKit
+  emoji: "✒️"
+  desc: "한글·영문 폰트 미리보기, 다운로드, 웹폰트 코드 생성"
+  url: https://fontkit.wooahouse.com
+
+- key: 개발
+  name: WooaDev
+  emoji: "🛠️"
+  desc: "Base64, JSON 포맷팅, URL 인코딩, 정규식 테스트 등 개발자 도구"
+  url: https://wooadev.wooahouse.com
+
+- key: 뷰어
+  name: WooaViewer
+  emoji: "👁️"
+  desc: "PDF, 이미지, 문서 파일을 설치 없이 브라우저에서 바로 열기"
+  url: https://wooaviewer.wooahouse.com
+
+- key: 시트
+  name: WooaSheet
+  emoji: "📊"
+  desc: "엑셀·CSV 파일을 브라우저에서 바로 열고 편집"
+  url: https://wooasheet.wooahouse.com

@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">
+  <meta itemprop="author" content="{{ site.author }}">
+
+  <header class="post-header">
+    <nav class="breadcrumb" aria-label="위치">
+      <a href="{{ '/' | relative_url }}">홈</a>
+      <span aria-hidden="true">›</span>
+      {% if page.categories.first %}
+      <span>{{ page.categories.first }}</span>
+      <span aria-hidden="true">›</span>
+      {% endif %}
+      <span>{{ page.title | truncate: 30 }}</span>
+    </nav>
+
+    <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time>
+      {% if page.tags.size > 0 %}
+      <span class="meta-sep">·</span>
+      <div class="post-tags inline">
+        {% for tag in page.tags limit: 5 %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-body" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {% include cta.html %}
+
+  <div class="post-nav">
+    <a href="{{ '/' | relative_url }}" class="back-link">← 전체 글 목록</a>
+  </div>
+</article>

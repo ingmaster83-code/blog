@@ -1,0 +1,14 @@
+{% assign kit_key = page.kit %}
+{% assign kits = site.data.kit_cta %}
+{% assign matched = kits | where: "key", kit_key | first %}
+{% unless matched %}{% assign matched = kits | first %}{% endunless %}
+
+<div class="cta-box">
+  <div class="cta-emoji">{{ matched.emoji }}</div>
+  <h3 class="cta-title">{{ matched.name }}로 바로 해결하기</h3>
+  <p class="cta-desc">{{ matched.desc }}</p>
+  <a href="{{ matched.url }}" class="cta-btn" target="_blank" rel="noopener">
+    {{ matched.name }} 무료로 사용하기 →
+  </a>
+  <p class="cta-note">설치 불필요 &nbsp;·&nbsp; 로그인 불필요 &nbsp;·&nbsp; 완전 무료</p>
+</div>
