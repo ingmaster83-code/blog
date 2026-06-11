@@ -11,7 +11,8 @@
   },
   {
     "keyword": "PDF 이미지로 변환하는 법",
-    "kit": "pdf"
+    "kit": "pdf",
+    "done": true
   },
   {
     "keyword": "이미지 PDF로 만들기 무료",
@@ -120,7 +121,8 @@
   },
   {
     "keyword": "GIF 만들기 무료 온라인",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "여러 이미지 한번에 압축하기",
@@ -134,7 +136,8 @@
   },
   {
     "keyword": "BMP 이미지 변환 방법",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "사진 용량 1MB 이하로 줄이기",
@@ -143,7 +146,8 @@
   },
   {
     "keyword": "QR코드 만들기 무료 온라인",
-    "kit": "qr"
+    "kit": "qr",
+    "done": true
   },
   {
     "keyword": "URL QR코드 생성 방법",
@@ -162,7 +166,8 @@
   },
   {
     "keyword": "QR코드 색상 커스텀 방법",
-    "kit": "qr"
+    "kit": "qr",
+    "done": true
   },
   {
     "keyword": "WiFi QR코드 생성 방법",
@@ -196,11 +201,13 @@
   },
   {
     "keyword": "글자수 세기 무료 온라인",
-    "kit": "텍스트"
+    "kit": "텍스트",
+    "done": true
   },
   {
     "keyword": "띄어쓰기 제외 글자수 확인",
-    "kit": "텍스트"
+    "kit": "텍스트",
+    "done": true
   },
   {
     "keyword": "텍스트 줄바꿈 제거 방법",
@@ -239,7 +246,8 @@
   },
   {
     "keyword": "텍스트 역순 뒤집기 방법",
-    "kit": "텍스트"
+    "kit": "텍스트",
+    "done": true
   },
   {
     "keyword": "HEX RGB 색상 변환 방법",
@@ -307,7 +315,8 @@
   },
   {
     "keyword": "평수 계산기 제곱미터 변환",
-    "kit": "계산"
+    "kit": "계산",
+    "done": true
   },
   {
     "keyword": "BMI 계산기 무료 온라인",
@@ -331,7 +340,8 @@
   },
   {
     "keyword": "이미지 텍스트 추출 무료 온라인",
-    "kit": "ocr"
+    "kit": "ocr",
+    "done": true
   },
   {
     "keyword": "사진에서 글자 복사하기 방법",
@@ -380,7 +390,8 @@
   },
   {
     "keyword": "음악 파일 형식 변환 방법",
-    "kit": "오디오"
+    "kit": "오디오",
+    "done": true
   },
   {
     "keyword": "WAV MP3 변환 무료 사이트",
@@ -399,7 +410,8 @@
   },
   {
     "keyword": "M4A MP3 변환 무료 온라인",
-    "kit": "오디오"
+    "kit": "오디오",
+    "done": true
   },
   {
     "keyword": "오디오 합치기 무료 온라인",
@@ -428,7 +440,8 @@
   },
   {
     "keyword": "동영상 용량 줄이기 방법",
-    "kit": "동영상"
+    "kit": "동영상",
+    "done": true
   },
   {
     "keyword": "MOV MP4 변환 무료 온라인",
@@ -502,7 +515,8 @@
   },
   {
     "keyword": "JWT 토큰 디코딩 방법",
-    "kit": "개발"
+    "kit": "개발",
+    "done": true
   },
   {
     "keyword": "HTML 특수문자 변환 방법",
@@ -511,7 +525,8 @@
   },
   {
     "keyword": "마크다운 미리보기 무료 온라인",
-    "kit": "개발"
+    "kit": "개발",
+    "done": true
   },
   {
     "keyword": "CSS 미니파이 방법 무료",
@@ -525,7 +540,8 @@
   },
   {
     "keyword": "설치 없이 파일 여는 방법",
-    "kit": "뷰어"
+    "kit": "뷰어",
+    "done": true
   },
   {
     "keyword": "HWP 파일 열기 무료 온라인",
@@ -569,15 +585,18 @@
   },
   {
     "keyword": "PDF 암호화 방법 무료",
-    "kit": "pdf"
+    "kit": "pdf",
+    "done": true
   },
   {
     "keyword": "PDF 텍스트 복사 안될 때 해결법",
-    "kit": "pdf"
+    "kit": "pdf",
+    "done": true
   },
   {
     "keyword": "PDF 서명 추가 무료 온라인",
-    "kit": "pdf"
+    "kit": "pdf",
+    "done": true
   },
   {
     "keyword": "PDF 워터마크 삭제 방법",
@@ -585,7 +604,8 @@
   },
   {
     "keyword": "PDF 여러 파일 일괄 변환",
-    "kit": "pdf"
+    "kit": "pdf",
+    "done": true
   },
   {
     "keyword": "스캔 PDF 용량 줄이기",
@@ -593,7 +613,8 @@
   },
   {
     "keyword": "PDF A4 사이즈로 변환 방법",
-    "kit": "pdf"
+    "kit": "pdf",
+    "done": true
   },
   {
     "keyword": "PDF 흑백으로 변환하는 법",
@@ -601,59 +622,73 @@
   },
   {
     "keyword": "PDF 표 엑셀로 변환 무료",
-    "kit": "pdf"
+    "kit": "pdf",
+    "done": true
   },
   {
     "keyword": "PDF 북마크 추가 무료 방법",
-    "kit": "pdf"
+    "kit": "pdf",
+    "done": true
   },
   {
     "keyword": "이미지 흑백 변환 무료 온라인",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "사진 밝기 조절 무료 온라인",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "PNG 투명 배경 만들기 무료",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "사진 여러 장 하나로 합치기 무료",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "이미지 EXIF 정보 제거 방법",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "TIFF 이미지 변환 무료 온라인",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "이미지 해상도 높이기 무료 방법",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "이미지 필터 효과 무료 온라인",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "이미지 크롭 비율 맞추기 무료",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "SNS 프로필 사진 사이즈 변환 무료",
-    "kit": "이미지"
+    "kit": "이미지",
+    "done": true
   },
   {
     "keyword": "QR코드 로고 삽입 방법 무료",
-    "kit": "qr"
+    "kit": "qr",
+    "done": true
   },
   {
     "keyword": "전화번호 QR코드 만들기 무료",
-    "kit": "qr"
+    "kit": "qr",
+    "done": true
   },
   {
     "keyword": "QR코드 스캔 앱 없이 읽기",
@@ -661,7 +696,8 @@
   },
   {
     "keyword": "QR코드 투명 배경 저장 방법",
-    "kit": "qr"
+    "kit": "qr",
+    "done": true
   },
   {
     "keyword": "QR코드 벡터 SVG 다운로드",
@@ -669,11 +705,13 @@
   },
   {
     "keyword": "QR코드 일괄 생성 방법 무료",
-    "kit": "qr"
+    "kit": "qr",
+    "done": true
   },
   {
     "keyword": "명함 디자인 QR코드 넣는 법",
-    "kit": "qr"
+    "kit": "qr",
+    "done": true
   },
   {
     "keyword": "텍스트 암호화 무료 온라인",
@@ -689,31 +727,38 @@
   },
   {
     "keyword": "텍스트 비교 차이점 찾기 무료",
-    "kit": "텍스트"
+    "kit": "텍스트",
+    "done": true
   },
   {
     "keyword": "ROT13 인코딩 무료 온라인",
-    "kit": "텍스트"
+    "kit": "텍스트",
+    "done": true
   },
   {
     "keyword": "모스부호 변환 무료 온라인",
-    "kit": "텍스트"
+    "kit": "텍스트",
+    "done": true
   },
   {
     "keyword": "줄바꿈 없애기 무료 온라인 도구",
-    "kit": "텍스트"
+    "kit": "텍스트",
+    "done": true
   },
   {
     "keyword": "색상 그라디언트 만들기 무료",
-    "kit": "색상"
+    "kit": "색상",
+    "done": true
   },
   {
     "keyword": "웹 접근성 색상 대비 체크 무료",
-    "kit": "색상"
+    "kit": "색상",
+    "done": true
   },
   {
     "keyword": "색상 팔레트 이미지에서 추출 무료",
-    "kit": "색상"
+    "kit": "색상",
+    "done": true
   },
   {
     "keyword": "다크모드 색상 설정 방법",
@@ -721,39 +766,48 @@
   },
   {
     "keyword": "인테리어 색상 조합 추천 무료",
-    "kit": "색상"
+    "kit": "색상",
+    "done": true
   },
   {
     "keyword": "브랜드 컬러 추출 무료 방법",
-    "kit": "색상"
+    "kit": "색상",
+    "done": true
   },
   {
     "keyword": "색온도 K값 변환 무료 도구",
-    "kit": "색상"
+    "kit": "색상",
+    "done": true
   },
   {
     "keyword": "대출 이자 계산기 무료 온라인",
-    "kit": "계산"
+    "kit": "계산",
+    "done": true
   },
   {
     "keyword": "칼로리 계산기 무료 온라인",
-    "kit": "계산"
+    "kit": "계산",
+    "done": true
   },
   {
     "keyword": "세금 계산기 무료 온라인",
-    "kit": "계산"
+    "kit": "계산",
+    "done": true
   },
   {
     "keyword": "연봉 실수령액 계산기 무료",
-    "kit": "계산"
+    "kit": "계산",
+    "done": true
   },
   {
     "keyword": "면적 계산기 무료 온라인",
-    "kit": "계산"
+    "kit": "계산",
+    "done": true
   },
   {
     "keyword": "할인율 계산기 무료 사이트",
-    "kit": "계산"
+    "kit": "계산",
+    "done": true
   },
   {
     "keyword": "로또 번호 생성기 무료 온라인",
@@ -765,7 +819,8 @@
   },
   {
     "keyword": "한자 인식 OCR 무료 온라인",
-    "kit": "ocr"
+    "kit": "ocr",
+    "done": true
   },
   {
     "keyword": "영어 OCR 텍스트 추출 무료",
@@ -773,15 +828,18 @@
   },
   {
     "keyword": "사진 속 숫자 인식 무료 도구",
-    "kit": "ocr"
+    "kit": "ocr",
+    "done": true
   },
   {
     "keyword": "표 이미지 텍스트 변환 방법",
-    "kit": "ocr"
+    "kit": "ocr",
+    "done": true
   },
   {
     "keyword": "OCR 정확도 높이는 방법",
-    "kit": "ocr"
+    "kit": "ocr",
+    "done": true
   },
   {
     "keyword": "일본어 OCR 텍스트 추출 무료",
@@ -801,39 +859,48 @@
   },
   {
     "keyword": "오디오 노이즈 제거 무료 온라인",
-    "kit": "오디오"
+    "kit": "오디오",
+    "done": true
   },
   {
     "keyword": "오디오 페이드 인아웃 무료 편집",
-    "kit": "오디오"
+    "kit": "오디오",
+    "done": true
   },
   {
     "keyword": "AAC MP3 변환 무료 온라인",
-    "kit": "오디오"
+    "kit": "오디오",
+    "done": true
   },
   {
     "keyword": "스테레오 모노 변환 무료 온라인",
-    "kit": "오디오"
+    "kit": "오디오",
+    "done": true
   },
   {
     "keyword": "오디오 샘플레이트 변환 무료",
-    "kit": "오디오"
+    "kit": "오디오",
+    "done": true
   },
   {
     "keyword": "AVI MP4 변환 무료 온라인",
-    "kit": "동영상"
+    "kit": "동영상",
+    "done": true
   },
   {
     "keyword": "동영상 속도 조절 무료 온라인",
-    "kit": "동영상"
+    "kit": "동영상",
+    "done": true
   },
   {
     "keyword": "동영상 썸네일 추출 무료",
-    "kit": "동영상"
+    "kit": "동영상",
+    "done": true
   },
   {
     "keyword": "동영상 회전 방법 무료 온라인",
-    "kit": "동영상"
+    "kit": "동영상",
+    "done": true
   },
   {
     "keyword": "FLV MP4 변환 무료 온라인",
@@ -841,19 +908,23 @@
   },
   {
     "keyword": "동영상 프레임 추출 무료 방법",
-    "kit": "동영상"
+    "kit": "동영상",
+    "done": true
   },
   {
     "keyword": "MKV MP4 변환 무료 온라인",
-    "kit": "동영상"
+    "kit": "동영상",
+    "done": true
   },
   {
     "keyword": "동영상 용량 10MB 이하로 줄이기",
-    "kit": "동영상"
+    "kit": "동영상",
+    "done": true
   },
   {
     "keyword": "손글씨 폰트 무료 다운로드",
-    "kit": "폰트"
+    "kit": "폰트",
+    "done": true
   },
   {
     "keyword": "고딕체 무료 폰트 추천 사이트",
@@ -861,11 +932,13 @@
   },
   {
     "keyword": "명조체 무료 폰트 다운로드",
-    "kit": "폰트"
+    "kit": "폰트",
+    "done": true
   },
   {
     "keyword": "PPT 무료 폰트 추천 모음",
-    "kit": "폰트"
+    "kit": "폰트",
+    "done": true
   },
   {
     "keyword": "유튜브 자막 폰트 무료 추천",
@@ -873,11 +946,13 @@
   },
   {
     "keyword": "인스타그램 감성 폰트 무료",
-    "kit": "폰트"
+    "kit": "폰트",
+    "done": true
   },
   {
     "keyword": "영어 필기체 폰트 무료 다운로드",
-    "kit": "폰트"
+    "kit": "폰트",
+    "done": true
   },
   {
     "keyword": "두꺼운 폰트 무료 다운로드 모음",
@@ -885,11 +960,13 @@
   },
   {
     "keyword": "SHA256 해시 생성 무료 온라인",
-    "kit": "개발"
+    "kit": "개발",
+    "done": true
   },
   {
     "keyword": "JSON CSV 변환 무료 온라인",
-    "kit": "개발"
+    "kit": "개발",
+    "done": true
   },
   {
     "keyword": "HTML 미리보기 무료 온라인",
@@ -897,11 +974,13 @@
   },
   {
     "keyword": "Unix 타임스탬프 변환 무료",
-    "kit": "개발"
+    "kit": "개발",
+    "done": true
   },
   {
     "keyword": "JavaScript 압축 무료 온라인",
-    "kit": "개발"
+    "kit": "개발",
+    "done": true
   },
   {
     "keyword": "XML JSON 변환 무료 온라인",
@@ -909,59 +988,73 @@
   },
   {
     "keyword": "UUID 생성기 무료 온라인",
-    "kit": "개발"
+    "kit": "개발",
+    "done": true
   },
   {
     "keyword": "IP 주소 확인 무료 온라인",
-    "kit": "개발"
+    "kit": "개발",
+    "done": true
   },
   {
     "keyword": "코드 에디터 온라인 무료 사이트",
-    "kit": "개발"
+    "kit": "개발",
+    "done": true
   },
   {
     "keyword": "CSS 색상 변환 무료 도구",
-    "kit": "개발"
+    "kit": "개발",
+    "done": true
   },
   {
     "keyword": "PPTX 파일 온라인에서 열기 무료",
-    "kit": "뷰어"
+    "kit": "뷰어",
+    "done": true
   },
   {
     "keyword": "CAD 파일 온라인 뷰어 무료",
-    "kit": "뷰어"
+    "kit": "뷰어",
+    "done": true
   },
   {
     "keyword": "EPS 파일 미리보기 무료 온라인",
-    "kit": "뷰어"
+    "kit": "뷰어",
+    "done": true
   },
   {
     "keyword": "PSD 파일 뷰어 무료 온라인",
-    "kit": "뷰어"
+    "kit": "뷰어",
+    "done": true
   },
   {
     "keyword": "ZIP 파일 온라인에서 열기 무료",
-    "kit": "뷰어"
+    "kit": "뷰어",
+    "done": true
   },
   {
     "keyword": "TXT 파일 온라인 뷰어 무료",
-    "kit": "뷰어"
+    "kit": "뷰어",
+    "done": true
   },
   {
     "keyword": "DXF 파일 온라인 뷰어 무료",
-    "kit": "뷰어"
+    "kit": "뷰어",
+    "done": true
   },
   {
     "keyword": "CSV 파일 편집 무료 온라인",
-    "kit": "시트"
+    "kit": "시트",
+    "done": true
   },
   {
     "keyword": "스프레드시트 차트 만들기 무료",
-    "kit": "시트"
+    "kit": "시트",
+    "done": true
   },
   {
     "keyword": "엑셀 중복 제거 무료 온라인",
-    "kit": "시트"
+    "kit": "시트",
+    "done": true
   },
   {
     "keyword": "TSV 파일 열기 무료 온라인",
@@ -969,14 +1062,622 @@
   },
   {
     "keyword": "엑셀 합계 자동 계산 무료 도구",
-    "kit": "시트"
+    "kit": "시트",
+    "done": true
   },
   {
     "keyword": "데이터 정렬 필터 무료 온라인",
-    "kit": "시트"
+    "kit": "시트",
+    "done": true
   },
   {
     "keyword": "엑셀 없이 XLSX 열기 무료",
-    "kit": "시트"
+    "kit": "시트",
+    "done": true
+  },
+  {
+    "keyword": "PDF 페이지 번호 추가 방법 무료",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "PDF 서명 삽입 무료 온라인",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "PDF 암호 해제 방법 무료",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "PDF 텍스트 추출 무료 방법",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "이미지 여러 장 PDF 만들기 무료",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "PDF 페이지 추출 방법 무료",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "PDF 헤더 푸터 추가 무료 온라인",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "PDF 메타데이터 편집 방법 무료",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "HEIC PDF 변환 무료 방법",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "EPUB 만들기 무료 온라인 방법",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "PDF 홀수 짝수 페이지 분리 방법",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "PDF 그레이스케일 변환 방법 무료",
+    "kit": "pdf",
+    "done": false
+  },
+  {
+    "keyword": "BMP JPG 변환 무료 온라인",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "AVIF 변환 무료 온라인 방법",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "TIFF JPG 변환 무료 방법",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "이미지 모자이크 처리 무료 온라인",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "이미지 둥근 테두리 만들기 무료",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "이미지 투명도 조절 무료 온라인",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "GIF 만들기 무료 온라인 방법",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "이미지 워터마크 추가 무료 방법",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "이미지 여러 장 합치기 무료 온라인",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "이미지 텍스트 추가 무료 온라인",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "ICO 파일 만들기 무료 방법",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "JFIF PNG 변환 무료 방법",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "이미지 업스케일 무료 온라인 방법",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "사진 분할 무료 온라인 방법",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "EXIF 데이터 삭제 무료 방법",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "이미지 회전 무료 온라인 도구",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "PNG SVG 변환 무료 방법",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "이미지 콜라주 만들기 무료 온라인",
+    "kit": "이미지",
+    "done": false
+  },
+  {
+    "keyword": "WiFi 비밀번호 QR코드 만들기 무료",
+    "kit": "qr",
+    "done": false
+  },
+  {
+    "keyword": "전화번호 QR코드 생성 무료 방법",
+    "kit": "qr",
+    "done": false
+  },
+  {
+    "keyword": "텍스트 QR코드 만들기 무료 온라인",
+    "kit": "qr",
+    "done": false
+  },
+  {
+    "keyword": "위치 QR코드 만들기 무료 방법",
+    "kit": "qr",
+    "done": false
+  },
+  {
+    "keyword": "캘린더 일정 QR코드 만들기 무료",
+    "kit": "qr",
+    "done": false
+  },
+  {
+    "keyword": "SMS QR코드 생성 무료 방법",
+    "kit": "qr",
+    "done": false
+  },
+  {
+    "keyword": "SNS QR코드 만들기 무료 온라인",
+    "kit": "qr",
+    "done": false
+  },
+  {
+    "keyword": "QR코드 일괄 생성 CSV 무료 방법",
+    "kit": "qr",
+    "done": false
+  },
+  {
+    "keyword": "바코드 생성기 무료 온라인 방법",
+    "kit": "qr",
+    "done": false
+  },
+  {
+    "keyword": "QR코드 커스터마이징 색상 로고 무료",
+    "kit": "qr",
+    "done": false
+  },
+  {
+    "keyword": "색상 팔레트 추출 이미지에서 무료",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "그라디언트 CSS 코드 생성 무료",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "색상 대비 검사 무료 온라인 방법",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "랜덤 색상 생성기 무료 온라인",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "색상 조화 배색 찾기 무료 도구",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "CSS 변수 색상 생성 무료 방법",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "색상 명도 채도 조절 무료 온라인",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "텍스트 그림자 CSS 생성 무료",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "박스 그림자 CSS 코드 생성 무료",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "색맹 시뮬레이션 무료 온라인 도구",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "투명도 색상 변환 무료 온라인",
+    "kit": "색상",
+    "done": false
+  },
+  {
+    "keyword": "마크다운 HTML 변환 무료 온라인",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "줄 번호 추가 텍스트 무료 방법",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "모스 부호 변환 무료 온라인",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "비밀번호 생성기 강력한 무료",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "해시 생성기 MD5 SHA 무료 온라인",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "텍스트 통계 분석 무료 온라인",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "슬러그 URL 변환 무료 방법",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "유니코드 변환 무료 온라인 방법",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "타임스탬프 날짜 변환 무료 방법",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "숫자 진법 변환 무료 온라인 도구",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "음성 텍스트 변환 무료 방법",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "YAML JSON 변환 무료 온라인",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "XML 포맷터 무료 온라인 방법",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "텍스트 차이 비교 무료 온라인",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "JWT 디코더 무료 온라인 방법",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "줄 도구 중복 제거 정렬 무료",
+    "kit": "텍스트",
+    "done": false
+  },
+  {
+    "keyword": "이자 계산기 무료 온라인 방법",
+    "kit": "계산",
+    "done": false
+  },
+  {
+    "keyword": "할인 계산기 무료 온라인 사용법",
+    "kit": "계산",
+    "done": false
+  },
+  {
+    "keyword": "평수 계산기 무료 온라인 방법",
+    "kit": "계산",
+    "done": false
+  },
+  {
+    "keyword": "체지방률 계산 무료 온라인 방법",
+    "kit": "계산",
+    "done": false
+  },
+  {
+    "keyword": "사칙연산 계산기 분수 무료",
+    "kit": "계산",
+    "done": false
+  },
+  {
+    "keyword": "속도 거리 시간 계산기 무료",
+    "kit": "계산",
+    "done": false
+  },
+  {
+    "keyword": "콜레스테롤 수치 계산 무료 방법",
+    "kit": "계산",
+    "done": false
+  },
+  {
+    "keyword": "전기요금 계산기 무료 온라인",
+    "kit": "계산",
+    "done": false
+  },
+  {
+    "keyword": "오디오 피치 조절 무료 온라인",
+    "kit": "오디오",
+    "done": false
+  },
+  {
+    "keyword": "음악 MR 제거 무료 온라인 방법",
+    "kit": "오디오",
+    "done": false
+  },
+  {
+    "keyword": "오디오 페이드인 페이드아웃 무료",
+    "kit": "오디오",
+    "done": false
+  },
+  {
+    "keyword": "벨소리 만들기 무료 온라인 방법",
+    "kit": "오디오",
+    "done": false
+  },
+  {
+    "keyword": "오디오 속도 조절 무료 방법",
+    "kit": "오디오",
+    "done": false
+  },
+  {
+    "keyword": "음성 녹음 무료 온라인 방법",
+    "kit": "오디오",
+    "done": false
+  },
+  {
+    "keyword": "오디오 파형 시각화 무료 온라인",
+    "kit": "오디오",
+    "done": false
+  },
+  {
+    "keyword": "동영상 워터마크 추가 무료 방법",
+    "kit": "동영상",
+    "done": false
+  },
+  {
+    "keyword": "동영상 오디오 추가 합치기 무료",
+    "kit": "동영상",
+    "done": false
+  },
+  {
+    "keyword": "동영상 회전 방향 변경 무료",
+    "kit": "동영상",
+    "done": false
+  },
+  {
+    "keyword": "MP4 GIF 변환 무료 온라인 방법",
+    "kit": "동영상",
+    "done": false
+  },
+  {
+    "keyword": "동영상 썸네일 추출 무료 방법",
+    "kit": "동영상",
+    "done": false
+  },
+  {
+    "keyword": "동영상 자르기 병합 무료 온라인",
+    "kit": "동영상",
+    "done": false
+  },
+  {
+    "keyword": "동영상 볼륨 조절 무료 방법",
+    "kit": "동영상",
+    "done": false
+  },
+  {
+    "keyword": "이미지 글자 인식 무료 온라인",
+    "kit": "ocr",
+    "done": false
+  },
+  {
+    "keyword": "PDF 텍스트 인식 OCR 무료 방법",
+    "kit": "ocr",
+    "done": false
+  },
+  {
+    "keyword": "표 이미지 텍스트 추출 무료",
+    "kit": "ocr",
+    "done": false
+  },
+  {
+    "keyword": "사진 문자 인식 무료 온라인 도구",
+    "kit": "ocr",
+    "done": false
+  },
+  {
+    "keyword": "클립보드 이미지 OCR 무료 방법",
+    "kit": "ocr",
+    "done": false
+  },
+  {
+    "keyword": "CSV 정렬 무료 온라인 방법",
+    "kit": "시트",
+    "done": false
+  },
+  {
+    "keyword": "CSV 필터링 무료 온라인 도구",
+    "kit": "시트",
+    "done": false
+  },
+  {
+    "keyword": "CSV 중복 제거 무료 방법",
+    "kit": "시트",
+    "done": false
+  },
+  {
+    "keyword": "CSV 인코딩 변환 무료 온라인",
+    "kit": "시트",
+    "done": false
+  },
+  {
+    "keyword": "CSV 열 선택 추출 무료 방법",
+    "kit": "시트",
+    "done": false
+  },
+  {
+    "keyword": "CSV JSON 변환 무료 온라인",
+    "kit": "시트",
+    "done": false
+  },
+  {
+    "keyword": "CSV 마크다운 표 변환 무료",
+    "kit": "시트",
+    "done": false
+  },
+  {
+    "keyword": "CSV SQL 변환 무료 온라인 방법",
+    "kit": "시트",
+    "done": false
+  },
+  {
+    "keyword": "CSV 파일 합치기 무료 온라인",
+    "kit": "시트",
+    "done": false
+  },
+  {
+    "keyword": "CSV 분할 무료 온라인 방법",
+    "kit": "시트",
+    "done": false
+  },
+  {
+    "keyword": "손글씨 폰트 무료 다운로드 추천",
+    "kit": "폰트",
+    "done": false
+  },
+  {
+    "keyword": "빈티지 폰트 무료 다운로드 방법",
+    "kit": "폰트",
+    "done": false
+  },
+  {
+    "keyword": "두꺼운 고딕 폰트 무료 추천",
+    "kit": "폰트",
+    "done": false
+  },
+  {
+    "keyword": "OTF TTF 변환 차이점 무료",
+    "kit": "폰트",
+    "done": false
+  },
+  {
+    "keyword": "폰트 라이선스 확인 방법 무료",
+    "kit": "폰트",
+    "done": false
+  },
+  {
+    "keyword": "폰트 CSS 코드 자동 생성 무료",
+    "kit": "폰트",
+    "done": false
+  },
+  {
+    "keyword": "JSON 유효성 검사 무료 온라인",
+    "kit": "개발",
+    "done": false
+  },
+  {
+    "keyword": "HTML 미니파이 무료 온라인 방법",
+    "kit": "개발",
+    "done": false
+  },
+  {
+    "keyword": "JS 미니파이 무료 온라인 도구",
+    "kit": "개발",
+    "done": false
+  },
+  {
+    "keyword": "색상 선택기 HEX 무료 온라인",
+    "kit": "개발",
+    "done": false
+  },
+  {
+    "keyword": "이미지 Base64 변환 무료 방법",
+    "kit": "개발",
+    "done": false
+  },
+  {
+    "keyword": "DWG 파일 열기 무료 온라인",
+    "kit": "뷰어",
+    "done": false
+  },
+  {
+    "keyword": "STL 파일 미리보기 무료 온라인",
+    "kit": "뷰어",
+    "done": false
+  },
+  {
+    "keyword": "PSD 파일 열기 무료 온라인 방법",
+    "kit": "뷰어",
+    "done": false
+  },
+  {
+    "keyword": "HEIC 파일 미리보기 무료 방법",
+    "kit": "뷰어",
+    "done": false
+  },
+  {
+    "keyword": "AI 파일 뷰어 무료 온라인",
+    "kit": "뷰어",
+    "done": false
+  },
+  {
+    "keyword": "TXT 파일 뷰어 무료 온라인",
+    "kit": "뷰어",
+    "done": false
   }
 ]
