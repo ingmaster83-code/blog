@@ -241,7 +241,7 @@ class BlogManager(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("우아하우스 블로그 매니저")
-        self.geometry("660x740")
+        self.geometry("660x880")
         self.resizable(False, False)
 
         self._running       = False
@@ -280,18 +280,28 @@ class BlogManager(ctk.CTk):
         ctk.CTkLabel(r2, text="생성 개수", width=110, anchor="w").pack(side="left")
         self.count_var   = ctk.IntVar(value=10)
         self.count_label = ctk.CTkLabel(r2, text="10개", width=44, anchor="w")
-        ctk.CTkSlider(r2, from_=1, to=20, variable=self.count_var,
-                      number_of_steps=19, width=180,
+        ctk.CTkSlider(r2, from_=1, to=100, variable=self.count_var,
+                      number_of_steps=99, width=180,
                       command=lambda v: self.count_label.configure(
                           text=f"{int(v)}개")).pack(side="left", padx=8)
         self.count_label.pack(side="left")
 
         # Push 여부
         r3 = ctk.CTkFrame(cfg, fg_color="transparent")
-        r3.pack(fill="x", padx=16, pady=(4, 14))
+        r3.pack(fill="x", padx=16, pady=(4, 6))
         ctk.CTkLabel(r3, text="GitHub Push", width=110, anchor="w").pack(side="left")
         self.push_var = ctk.BooleanVar(value=True)
         ctk.CTkSwitch(r3, text="생성 후 자동 push", variable=self.push_var).pack(side="left", padx=8)
+
+        # PC 종료
+        r3b = ctk.CTkFrame(cfg, fg_color="transparent")
+        r3b.pack(fill="x", padx=16, pady=(0, 14))
+        ctk.CTkLabel(r3b, text="완료 후 종료", width=110, anchor="w").pack(side="left")
+        self.shutdown_var = ctk.BooleanVar(value=False)
+        ctk.CTkSwitch(r3b, text="작업 완료 후 PC 종료",
+                      variable=self.shutdown_var,
+                      button_color="#EF4444", button_hover_color="#DC2626",
+                      progress_color="#EF4444").pack(side="left", padx=8)
 
         # ── 자동 스케줄 ──
         sch = ctk.CTkFrame(self)
@@ -351,9 +361,22 @@ class BlogManager(ctk.CTk):
                                         font=ctk.CTkFont(size=12))
         self.stats_label.pack(side="left", padx=14)
 
+        ctk.CTkButton(stat, text="키워드 목록", width=90, height=26,
+                      font=ctk.CTkFont(size=11),
+                      fg_color="#374151", hover_color="#4B5563",
+                      command=self._show_keywords).pack(side="left", padx=4)
+
+        ctk.CTkButton(stat, text="↻", width=28, height=26,
+                      font=ctk.CTkFont(size=14),
+                      fg_color="#374151", hover_color="#4B5563",
+                      command=lambda: threading.Thread(
+                          target=self._fetch_balance, daemon=True).start()
+                      ).pack(side="right", padx=(0, 4))
+
         self.balance_label = ctk.CTkLabel(stat, text="잔액 확인 중...",
-                                          font=ctk.CTkFont(size=12), text_color="#10B981")
-        self.balance_label.pack(side="right", padx=14)
+                                          font=ctk.CTkFont(size=12, weight="bold"),
+                                          text_color="#10B981")
+        self.balance_label.pack(side="right", padx=(8, 0))
 
     # ──── 로그 ────────────────────────────────────────────────────────────────
 
@@ -378,6 +401,61 @@ class BlogManager(ctk.CTk):
     def _fetch_balance(self):
         text = get_balance()
         self.after(0, lambda: self.balance_label.configure(text=text))
+
+    # ──── 키워드 목록 창 ──────────────────────────────────────────────────────
+
+    def _show_keywords(self):
+        win = ctk.CTkToplevel(self)
+        win.title("키워드 목록")
+        win.geometry("540x620")
+        win.resizable(False, True)
+        win.focus()
+
+        # 상단 필터 + 카운트
+        top = ctk.CTkFrame(win)
+        top.pack(fill="x", padx=16, pady=(14, 6))
+        ctk.CTkLabel(top, text="Kit 필터", width=70, anchor="w").pack(side="left", padx=8)
+        filter_var = ctk.StringVar(value="전체")
+        count_label = ctk.CTkLabel(win, text="", font=ctk.CTkFont(size=12), text_color="#6B7280")
+        count_label.pack(anchor="e", padx=20)
+
+        scroll = ctk.CTkScrollableFrame(win)
+        scroll.pack(fill="both", expand=True, padx=16, pady=(4, 16))
+
+        def refresh(kit_filter="전체"):
+            for w in scroll.winfo_children():
+                w.destroy()
+            try:
+                with open(KEYWORDS_FILE, encoding="utf-8") as f:
+                    kws = json.load(f)
+            except Exception:
+                return
+            items = kws if kit_filter == "전체" else [k for k in kws if k.get("kit") == kit_filter]
+            done_n = sum(1 for k in items if k.get("done"))
+            count_label.configure(text=f"완료 {done_n} / 전체 {len(items)}개")
+            for item in items:
+                row = ctk.CTkFrame(scroll, fg_color="#1F2937", corner_radius=6)
+                row.pack(fill="x", pady=2)
+                kit_tag = item.get("kit", "-")
+                ctk.CTkLabel(row, text=kit_tag, width=58,
+                             font=ctk.CTkFont(size=11),
+                             fg_color="#374151", corner_radius=4,
+                             anchor="center").pack(side="left", padx=(8, 4), pady=5)
+                ctk.CTkLabel(row, text=item["keyword"], anchor="w",
+                             font=ctk.CTkFont(size=12)).pack(side="left", padx=4,
+                                                             fill="x", expand=True)
+                is_done = item.get("done", False)
+                ctk.CTkLabel(row,
+                             text="완료" if is_done else "대기",
+                             width=40, font=ctk.CTkFont(size=11),
+                             fg_color="#10B981" if is_done else "#4B5563",
+                             corner_radius=4,
+                             text_color="white").pack(side="right", padx=8, pady=5)
+
+        ctk.CTkOptionMenu(top, variable=filter_var,
+                          values=list(KIT_INFO.keys()), width=160,
+                          command=refresh).pack(side="left", padx=4)
+        refresh()
 
     # ──── 즉시 실행 ───────────────────────────────────────────────────────────
 
@@ -446,6 +524,9 @@ class BlogManager(ctk.CTk):
             self._running = False
             self.after(0, lambda: self.run_btn.configure(state="normal", text="지금 바로 실행"))
             self.after(0, self._refresh_stats)
+            if self.shutdown_var.get():
+                self.after(0, lambda: self._log("60초 후 PC 종료됩니다. 취소: shutdown /a"))
+                subprocess.run(["shutdown", "/s", "/t", "60"])
 
     # ──── 자동 스케줄 ─────────────────────────────────────────────────────────
 
