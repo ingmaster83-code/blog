@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://blog.wooahouse.com/sitemap.xml
+
+#DaumWebMasterTool:9672dc2f8c31f3d9151ac2b83072966cc1ac311ac60554f0c36e8d3a2fda6da5:5OHFs/qHHlfCvAas17iLzw==
