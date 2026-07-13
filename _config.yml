@@ -34,8 +34,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - generate_post.py
+  - blog_manager.py
+  - BLOG_MANAGER.md
   - keywords.json
   - "*.bat"
+  - "*.vbs"
   - README.md
   - .gitignore
   - vendor/
+  - __pycache__/
