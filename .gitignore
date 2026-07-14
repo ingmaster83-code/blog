@@ -4,3 +4,11 @@ _site/
 .jekyll-metadata
 Gemfile.lock
 vendor/
+__pycache__/
+
+# 내부 운영 도구 (블로그 매니저) - git에 올리지 않음
+blog_manager.py
+keywords.json
+BLOG_MANAGER.md
+블로그매니저*.bat
+블로그매니저*.vbs
