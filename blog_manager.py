@@ -20,21 +20,58 @@ KEYWORDS_FILE = BASE_DIR / "keywords.json"
 API_KEY_PATH  = Path(r"C:\개인\개인 프로젝트\blogwriter_new\blogger_seo_bot\config\deepseek_api_key.txt")
 
 # ──── Kit 정보 ────────────────────────────────────────────────────────────────
+# 각 값: (표시 이름, URL, 카테고리)
+#   카테고리 "tool" = 브라우저에서 파일/텍스트를 직접 처리하는 도구
+#   카테고리 "link" = 공식 다운로드/서식 링크 모음 사이트
+#   카테고리 "info" = 공공데이터·생활정보 조회 사이트
 KIT_INFO = {
     "전체":   None,
-    "pdf":    ("WooaPDF",    "https://pdfkit.wooahouse.com"),
-    "이미지": ("WooaImage",  "https://imagekit.wooahouse.com"),
-    "qr":     ("WooaQR",     "https://qrkit.wooahouse.com"),
-    "텍스트": ("WooaText",   "https://textkit.wooahouse.com"),
-    "색상":   ("WooaColor",  "https://colorkit.wooahouse.com"),
-    "계산":   ("WooaCalc",   "https://calckit.wooahouse.com"),
-    "ocr":    ("WooaOCR",    "https://wooaocr.wooahouse.com"),
-    "오디오": ("WooaAudio",  "https://wooaaudio.wooahouse.com"),
-    "동영상": ("WooaVideo",  "https://wooavideo.wooahouse.com"),
-    "폰트":   ("FontKit",    "https://fontkit.wooahouse.com"),
-    "개발":   ("WooaDev",    "https://wooadev.wooahouse.com"),
-    "뷰어":   ("WooaViewer", "https://wooaviewer.wooahouse.com"),
-    "시트":   ("WooaSheet",  "https://wooasheet.wooahouse.com"),
+    "pdf":    ("WooaPDF",    "https://pdfkit.wooahouse.com",    "tool"),
+    "이미지": ("WooaImage",  "https://imagekit.wooahouse.com",  "tool"),
+    "qr":     ("WooaQR",     "https://qrkit.wooahouse.com",     "tool"),
+    "텍스트": ("WooaText",   "https://textkit.wooahouse.com",   "tool"),
+    "색상":   ("WooaColor",  "https://colorkit.wooahouse.com",  "tool"),
+    "계산":   ("WooaCalc",   "https://calckit.wooahouse.com",   "tool"),
+    "ocr":    ("WooaOCR",    "https://wooaocr.wooahouse.com",   "tool"),
+    "오디오": ("WooaAudio",  "https://wooaaudio.wooahouse.com", "tool"),
+    "동영상": ("WooaVideo",  "https://wooavideo.wooahouse.com", "tool"),
+    "폰트":   ("FontKit",    "https://fontkit.wooahouse.com",   "tool"),
+    "개발":   ("WooaDev",    "https://wooadev.wooahouse.com",   "tool"),
+    "뷰어":   ("WooaViewer", "https://wooaviewer.wooahouse.com","tool"),
+    "시트":   ("WooaSheet",  "https://wooasheet.wooahouse.com", "tool"),
+    "seo":    ("WooaSEO",    "https://wooaseo.wooahouse.com",   "tool"),
+    "맥":     ("WooaMac",    "https://mactools.wooahouse.com",  "link"),
+    "pc":     ("WooaPC",     "https://pctools.wooahouse.com",   "link"),
+    "vs":     ("WooaVS",     "https://vskit.wooahouse.com",     "link"),
+    "양식":   ("WooaForm",   "https://wooaform.wooahouse.com",  "link"),
+    "모의고사": ("WooaGosa",   "https://wooagosa.wooahouse.com",     "info"),
+    "약국":     ("이약뭐야",     "https://wooayak.wooahouse.com",      "info"),
+    "병원":     ("병원약국찾기", "https://hosppass.wooahouse.com",     "info"),
+    "자격증":   ("자격증일정",   "https://wooagosapass.wooahouse.com", "info"),
+    "보조금":   ("보조금정보",   "https://wooabojopass.wooahouse.com", "info"),
+    "청약":     ("청약정보",     "https://wooaaptpass.wooahouse.com",  "info"),
+    "오일장":   ("전국5일장",    "https://wooasijang.wooahouse.com",   "info"),
+    "주차장":   ("공영주차장",   "https://wooaparking.wooahouse.com",  "info"),
+    "도서관":   ("전국도서관",   "https://wooalib.wooahouse.com",      "info"),
+    "캠핑장":   ("전국캠핑장",   "https://wooacamp.wooahouse.com",     "info"),
+    "나들이":   ("아이랑갈만한곳", "https://wooakids.wooahouse.com",   "info"),
+    "폐기물":   ("대형폐기물수수료", "https://wooatrash.wooahouse.com","info"),
+}
+
+# 카테고리별 FAQ 마지막 안전/신뢰 질문
+CATEGORY_FAQ = {
+    "tool": {
+        "q": "파일이 인터넷에 업로드되나요?",
+        "a": "아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보 걱정 없이 안전하게 사용할 수 있습니다.",
+    },
+    "link": {
+        "q": "링크가 공식 배포처로 연결되나요?",
+        "a": "네. 모든 다운로드 링크는 각 프로그램의 공식 홈페이지로 연결되며, 항상 최신 버전을 안전하게 받을 수 있도록 주기적으로 점검합니다.",
+    },
+    "info": {
+        "q": "이 정보는 무료로 이용할 수 있나요?",
+        "a": "네. 회원가입이나 로그인 없이 무료로 모든 정보를 확인하실 수 있으며, 최신 정보로 주기적으로 업데이트됩니다.",
+    },
 }
 
 PROMPT_STYLES = [
@@ -70,12 +107,14 @@ def generate_post(keyword: str, kit: str) -> dict:
     api_key = get_api_key()
     kit_entry = KIT_INFO.get(kit)
     if not kit_entry:
-        kit_name, kit_url = "WooaHouse", "https://wooahouse.com"
+        kit_name, kit_url, category = "WooaHouse", "https://wooahouse.com", "tool"
     else:
-        kit_name, kit_url = kit_entry
+        kit_name, kit_url, category = kit_entry
 
     style     = random.choice(PROMPT_STYLES)
     structure = random.choice(STRUCTURES)
+    safety_q  = CATEGORY_FAQ[category]["q"]
+    safety_a  = CATEGORY_FAQ[category]["a"]
 
     prompt = f"""당신은 구글 SEO 전문가이자 한국어 블로그 작가입니다.
 
@@ -111,8 +150,8 @@ def generate_post(keyword: str, kit: str) -> dict:
 ■ FAQ (3개 — 구글 People Also Ask 최적화)
   - 실제 사용자가 검색할 법한 구체적인 질문
   - 각 답변은 2~3문장, 핵심만 간결하게
-  - 마지막 질문은 반드시: "파일이 인터넷에 업로드되나요?"
-    답변: "아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보 걱정 없이 안전하게 사용할 수 있습니다."
+  - 마지막 질문은 반드시: "{safety_q}"
+    답변: "{safety_a}"
 
 ■ 태그 (5~8개, 쉼표 구분)
   - 타겟 키워드 + 연관 검색어 위주
@@ -126,8 +165,8 @@ Q: 질문1?
 A: 답변1.
 Q: 질문2?
 A: 답변2.
-Q: 파일이 인터넷에 업로드되나요?
-A: 아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보 걱정 없이 안전하게 사용할 수 있습니다.
+Q: {safety_q}
+A: {safety_a}
 [/FAQ]
 [BODY]
 마크다운 본문 (FAQ 내용 중복 작성 금지)
@@ -222,6 +261,116 @@ def git_push(count: int):
     subprocess.run(["git", "-C", str(BASE_DIR), "commit", "-m", msg], check=True)
     subprocess.run(["git", "-C", str(BASE_DIR), "push"], check=True)
 
+def _parse_keyword_lines(text: str) -> list[str]:
+    result = []
+    for line in text.strip().splitlines():
+        line = line.strip().lstrip("0123456789.-) ")
+        if line and 5 <= len(line) <= 60:
+            result.append(line)
+    return result
+
+
+def generate_keywords(kit: str, topic_hint: str, count: int) -> list[str]:
+    """단일 키트 — API 1회 호출"""
+    api_key = get_api_key()
+    kit_entry = KIT_INFO.get(kit)
+    if not kit_entry:
+        kit_name, kit_url, _ = "WooaHouse", "https://wooahouse.com", "tool"
+    else:
+        kit_name, kit_url, _ = kit_entry
+
+    topic_line = f"\n- 주제 힌트: {topic_hint}" if topic_hint.strip() else ""
+
+    prompt = f"""당신은 한국 SEO 전문가입니다.
+{kit_name} ({kit_url}) 사이트를 홍보하는 블로그 포스팅을 위한 롱테일 SEO 키워드를 {count}개 생성해주세요.
+
+조건:
+- 한국어 키워드{topic_line}
+- 월 검색량 100~10,000 사이의 롱테일 키워드 (경쟁이 낮고 구체적인)
+- "무료", "방법", "온라인", "쉽게", "다운로드" 등 검색 의도가 명확한 단어 포함
+- 각 키워드는 10~40자 이내
+- 정보성, 방법 탐색, 비교, 후기 등 다양한 검색 의도 포함
+- 중복 없이 {count}개 정확히
+
+출력 형식 — 키워드만, 한 줄에 하나씩, 번호·설명·특수기호 없이:
+키워드1
+키워드2
+..."""
+
+    resp = requests.post(
+        "https://api.deepseek.com/chat/completions",
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+        json={"model": "deepseek-chat",
+              "messages": [{"role": "user", "content": prompt}],
+              "max_tokens": 2000, "temperature": 0.8},
+        timeout=60,
+    )
+    resp.raise_for_status()
+    return _parse_keyword_lines(resp.json()["choices"][0]["message"]["content"])
+
+
+def generate_keywords_all(topic_hint: str, count_per_kit: int) -> dict[str, list[str]]:
+    """전체 키트 — API 1회 호출로 모두 처리"""
+    api_key = get_api_key()
+
+    kit_lines = []
+    for key, entry in KIT_INFO.items():
+        if key == "전체" or entry is None:
+            continue
+        kit_name, kit_url, _ = entry
+        kit_lines.append(f"- [{key}] {kit_name} ({kit_url})")
+
+    topic_line = f"\n- 주제 힌트: {topic_hint}" if topic_hint.strip() else ""
+    total_tokens = count_per_kit * len(kit_lines) * 25  # 키워드당 약 25토큰 여유
+
+    prompt = f"""당신은 한국 SEO 전문가입니다.
+아래 도구들 각각에 대해 롱테일 SEO 키워드를 {count_per_kit}개씩 생성해주세요.
+
+도구 목록:
+{chr(10).join(kit_lines)}{topic_line}
+
+조건:
+- 한국어 키워드
+- 월 검색량 100~10,000 사이의 롱테일 키워드 (경쟁이 낮고 구체적인)
+- "무료", "방법", "온라인", "쉽게", "다운로드" 등 검색 의도가 명확한 단어 포함
+- 각 키워드는 10~40자 이내
+- 정보성, 방법 탐색, 비교, 후기 등 다양한 검색 의도 포함
+- 각 도구마다 중복 없이 정확히 {count_per_kit}개
+
+출력 형식 — 아래 형식만 사용, 다른 텍스트 금지:
+[pdf]
+키워드1
+키워드2
+[이미지]
+키워드1
+..."""
+
+    resp = requests.post(
+        "https://api.deepseek.com/chat/completions",
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+        json={"model": "deepseek-chat",
+              "messages": [{"role": "user", "content": prompt}],
+              "max_tokens": min(total_tokens, 8000), "temperature": 0.8},
+        timeout=120,
+    )
+    resp.raise_for_status()
+    raw = resp.json()["choices"][0]["message"]["content"]
+
+    result: dict[str, list[str]] = {}
+    current_kit = None
+    for line in raw.strip().splitlines():
+        line = line.strip()
+        m = re.match(r'^\[([^\]]+)\]$', line)
+        if m:
+            current_kit = m.group(1).strip()
+            result[current_kit] = []
+        elif current_kit and line:
+            line = line.lstrip("0123456789.-) ")
+            if line and 5 <= len(line) <= 60:
+                result[current_kit].append(line)
+    return result
+
+
 def get_balance() -> str:
     try:
         api_key = get_api_key()
@@ -241,7 +390,7 @@ class BlogManager(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("우아하우스 블로그 매니저")
-        self.geometry("660x880")
+        self.geometry("660x1060")
         self.resizable(False, False)
 
         self._running       = False
@@ -280,8 +429,8 @@ class BlogManager(ctk.CTk):
         ctk.CTkLabel(r2, text="생성 개수", width=110, anchor="w").pack(side="left")
         self.count_var   = ctk.IntVar(value=10)
         self.count_label = ctk.CTkLabel(r2, text="10개", width=44, anchor="w")
-        ctk.CTkSlider(r2, from_=1, to=100, variable=self.count_var,
-                      number_of_steps=99, width=180,
+        ctk.CTkSlider(r2, from_=1, to=1000, variable=self.count_var,
+                      number_of_steps=999, width=180,
                       command=lambda v: self.count_label.configure(
                           text=f"{int(v)}개")).pack(side="left", padx=8)
         self.count_label.pack(side="left")
@@ -302,6 +451,52 @@ class BlogManager(ctk.CTk):
                       variable=self.shutdown_var,
                       button_color="#EF4444", button_hover_color="#DC2626",
                       progress_color="#EF4444").pack(side="left", padx=8)
+
+        # ── 키워드 생성 ──
+        kw_frame = ctk.CTkFrame(self)
+        kw_frame.pack(fill="x", padx=24, pady=6)
+
+        ctk.CTkLabel(kw_frame, text="키워드 생성",
+                     font=ctk.CTkFont(size=13, weight="bold")).pack(anchor="w", padx=16, pady=(12, 6))
+
+        kwr1 = ctk.CTkFrame(kw_frame, fg_color="transparent")
+        kwr1.pack(fill="x", padx=16, pady=4)
+        ctk.CTkLabel(kwr1, text="Kit 선택", width=110, anchor="w").pack(side="left")
+        self.kw_kit_var = ctk.StringVar(value="전체")
+        ctk.CTkOptionMenu(kwr1, variable=self.kw_kit_var,
+                          values=list(KIT_INFO.keys()),
+                          width=180).pack(side="left", padx=8)
+
+        kwr2 = ctk.CTkFrame(kw_frame, fg_color="transparent")
+        kwr2.pack(fill="x", padx=16, pady=4)
+        ctk.CTkLabel(kwr2, text="주제 힌트", width=110, anchor="w").pack(side="left")
+        self.kw_topic_entry = ctk.CTkEntry(kwr2, width=280,
+                                           placeholder_text="선택 사항: 예) 이미지 압축, PDF 변환")
+        self.kw_topic_entry.pack(side="left", padx=8)
+
+        kwr3 = ctk.CTkFrame(kw_frame, fg_color="transparent")
+        kwr3.pack(fill="x", padx=16, pady=4)
+        ctk.CTkLabel(kwr3, text="생성 개수", width=110, anchor="w").pack(side="left")
+        self.kw_count_var   = ctk.IntVar(value=30)
+        self.kw_count_label = ctk.CTkLabel(kwr3, text="30개", width=44, anchor="w")
+        ctk.CTkSlider(kwr3, from_=10, to=200, variable=self.kw_count_var,
+                      number_of_steps=190, width=180,
+                      command=lambda v: self.kw_count_label.configure(
+                          text=f"{int(v)}개")).pack(side="left", padx=8)
+        self.kw_count_label.pack(side="left")
+
+        kwr4 = ctk.CTkFrame(kw_frame, fg_color="transparent")
+        kwr4.pack(fill="x", padx=16, pady=(4, 14))
+        self.kw_btn = ctk.CTkButton(
+            kwr4, text="키워드 생성 + 추가",
+            height=38, width=200,
+            fg_color="#6366F1", hover_color="#4F46E5",
+            command=self._on_generate_keywords)
+        self.kw_btn.pack(side="left")
+        self.kw_result_label = ctk.CTkLabel(kwr4, text="",
+                                             font=ctk.CTkFont(size=12),
+                                             text_color="#10B981")
+        self.kw_result_label.pack(side="left", padx=12)
 
         # ── 자동 스케줄 ──
         sch = ctk.CTkFrame(self)
@@ -456,6 +651,67 @@ class BlogManager(ctk.CTk):
                           values=list(KIT_INFO.keys()), width=160,
                           command=refresh).pack(side="left", padx=4)
         refresh()
+
+    # ──── 키워드 생성 ─────────────────────────────────────────────────────────
+
+    def _on_generate_keywords(self):
+        if self._running:
+            self._log("실행 중엔 키워드 생성을 시작할 수 없습니다.")
+            return
+        self.kw_btn.configure(state="disabled", text="생성 중...")
+        self.kw_result_label.configure(text="")
+        threading.Thread(target=self._run_keyword_generation, daemon=True).start()
+
+    def _run_keyword_generation(self):
+        kit   = self.kw_kit_var.get()
+        topic = self.kw_topic_entry.get()
+        count = int(self.kw_count_var.get())
+
+        try:
+            with open(KEYWORDS_FILE, encoding="utf-8") as f:
+                all_kws = json.load(f)
+            existing = {k["keyword"] for k in all_kws}
+            total_added = 0
+
+            if kit == "전체":
+                self.after(0, lambda: self._log(
+                    f"=== 키워드 생성 시작: 전체 키트 | Kit당 {count}개 (API 1회 호출) ==="))
+                kit_map = generate_keywords_all(topic, count)
+                for cur_kit, new_kws in kit_map.items():
+                    added = 0
+                    for kw in new_kws:
+                        if kw not in existing:
+                            all_kws.append({"keyword": kw, "kit": cur_kit, "done": False})
+                            existing.add(kw)
+                            added += 1
+                    total_added += added
+                    self.after(0, lambda k=cur_kit, a=added, d=len(new_kws)-added:
+                               self._log(f"  {k}: {a}개 추가 (중복 {d}개 제외)"))
+            else:
+                self.after(0, lambda: self._log(
+                    f"=== 키워드 생성 시작: {kit} | {count}개 ==="))
+                new_kws = generate_keywords(kit, topic, count)
+                added = 0
+                for kw in new_kws:
+                    if kw not in existing:
+                        all_kws.append({"keyword": kw, "kit": kit, "done": False})
+                        existing.add(kw)
+                        added += 1
+                total_added = added
+                self.after(0, lambda a=added, d=len(new_kws)-added:
+                           self._log(f"  {kit}: {a}개 추가 (중복 {d}개 제외)"))
+
+            with open(KEYWORDS_FILE, "w", encoding="utf-8") as f:
+                json.dump(all_kws, f, ensure_ascii=False, indent=2)
+
+            self.after(0, lambda: self._log(f"=== 완료: 총 {total_added}개 추가 ==="))
+            self.after(0, lambda: self.kw_result_label.configure(text=f"+{total_added}개 추가됨"))
+            self.after(0, self._refresh_stats)
+        except Exception as e:
+            err = str(e)[:100]
+            self.after(0, lambda: self._log(f"[키워드 생성 실패] {err}"))
+        finally:
+            self.after(0, lambda: self.kw_btn.configure(state="normal", text="키워드 생성 + 추가"))
 
     # ──── 즉시 실행 ───────────────────────────────────────────────────────────
 
