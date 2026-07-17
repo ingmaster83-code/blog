@@ -1,7 +1,10 @@
 {% assign kit_key = page.kit %}
 {% assign kits = site.data.kit_cta %}
 {% assign matched = kits | where: "key", kit_key | first %}
-{% unless matched %}{% assign matched = kits | first %}{% endunless %}
+{% unless matched %}
+<!-- CTA_MAPPING_MISSING: page.kit="{{ kit_key }}" not found in _data/kit_cta.yml — falling back to _default. Add a matching entry to _data/kit_cta.yml. -->
+{% assign matched = kits | where: "key", "_default" | first %}
+{% endunless %}
 
 <div class="cta-box">
   <div class="cta-emoji">{{ matched.emoji }}</div>

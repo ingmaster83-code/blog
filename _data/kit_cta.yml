@@ -75,3 +75,111 @@
   emoji: "📊"
   desc: "엑셀·CSV 파일을 브라우저에서 바로 열고 편집"
   url: https://wooasheet.wooahouse.com
+
+- key: seo
+  name: WooaSEO
+  emoji: "🔎"
+  desc: "메타태그, OG태그, 사이트맵, robots.txt 등 SEO 최적화 도구 모음"
+  url: https://wooaseo.wooahouse.com
+
+- key: 맥
+  name: WooaMac
+  emoji: "🍎"
+  desc: "Mac 구입·포맷 후 꼭 필요한 필수 앱 공식 다운로드 링크 모음"
+  url: https://mactools.wooahouse.com
+
+- key: pc
+  name: WooaPC
+  emoji: "🖥️"
+  desc: "윈도우 포맷·재설치 후 필요한 필수 프로그램 공식 다운로드 링크 모음"
+  url: https://pctools.wooahouse.com
+
+- key: vs
+  name: WooaVS
+  emoji: "💻"
+  desc: "GitHub Copilot, GitLens 등 VS Code 필수 확장 프로그램 카테고리별 모음"
+  url: https://vskit.wooahouse.com
+
+- key: 양식
+  name: WooaForm
+  emoji: "📋"
+  desc: "각종 공문서·계약서 서식 무료 다운로드 모음"
+  url: https://wooaform.wooahouse.com
+
+- key: 모의고사
+  name: WooaGosa
+  emoji: "📝"
+  desc: "운전면허 등 자격증·면허 시험 무료 모의고사, 오답노트·타이머 제공"
+  url: https://wooagosa.wooahouse.com
+
+- key: 약국
+  name: 이약뭐야
+  emoji: "💊"
+  desc: "가까운 약국 위치와 운영시간을 바로 확인"
+  url: https://wooayak.wooahouse.com
+
+- key: 병원
+  name: 병원약국찾기
+  emoji: "🏥"
+  desc: "주변 병원·약국 위치와 진료시간을 한눈에 확인"
+  url: https://hosppass.wooahouse.com
+
+- key: 자격증
+  name: 자격증일정
+  emoji: "📜"
+  desc: "국가자격증 시험 일정과 접수 기간을 한눈에 확인"
+  url: https://wooagosapass.wooahouse.com
+
+- key: 보조금
+  name: 보조금정보
+  emoji: "💰"
+  desc: "정부·지자체 보조금 지원 정보를 한눈에 확인"
+  url: https://wooabojopass.wooahouse.com
+
+- key: 청약
+  name: 청약정보
+  emoji: "🏠"
+  desc: "아파트 청약 일정과 경쟁률 정보를 한눈에 확인"
+  url: https://wooaaptpass.wooahouse.com
+
+- key: 오일장
+  name: 전국5일장
+  emoji: "🏪"
+  desc: "전국 5일장 일정과 위치를 한눈에 확인"
+  url: https://wooasijang.wooahouse.com
+
+- key: 주차장
+  name: 공영주차장
+  emoji: "🅿️"
+  desc: "전국 공영주차장 위치와 요금 정보를 한눈에 확인"
+  url: https://wooaparking.wooahouse.com
+
+- key: 도서관
+  name: 전국도서관
+  emoji: "📚"
+  desc: "전국 도서관 위치와 운영시간을 한눈에 확인"
+  url: https://wooalib.wooahouse.com
+
+- key: 캠핑장
+  name: 전국캠핑장
+  emoji: "⛺"
+  desc: "전국 캠핑장 위치와 예약 정보를 한눈에 확인"
+  url: https://wooacamp.wooahouse.com
+
+- key: 나들이
+  name: 아이랑갈만한곳
+  emoji: "🧸"
+  desc: "아이와 함께 가볼 만한 나들이 장소를 한눈에 확인"
+  url: https://wooakids.wooahouse.com
+
+- key: 폐기물
+  name: 대형폐기물수수료
+  emoji: "🗑️"
+  desc: "대형 폐기물 배출 수수료를 지역별로 바로 확인"
+  url: https://wooatrash.wooahouse.com
+
+- key: _default
+  name: WooaHouse
+  emoji: "🏠"
+  desc: "설치 불필요 · 로그인 불필요 · 브라우저에서 바로 쓰는 무료 도구 모음"
+  url: https://wooahouse.com
