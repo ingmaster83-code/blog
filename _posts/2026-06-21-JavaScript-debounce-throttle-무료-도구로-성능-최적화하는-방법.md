@@ -23,8 +23,6 @@ faq:
     a: "아니요. 모든 처리는 브라우저 안에서만 이루어지며 파일은 서버로 전송되지 않습니다. 개인정보 걱정 없이 안전하게 사용할 수 있습니다."
 ---
 
-# JavaScript debounce throttle 무료 도구로 실무 성능 문제 해결하기
-
 프런트엔드 개발을 하다 보면 스크롤, 리사이즈, 키보드 입력 같은 이벤트가 너무 자주 발생해서 성능이 급격히 떨어지는 경험을 해보셨을 겁니다. **JavaScript debounce throttle**은 이런 문제를 해결하는 핵심 기법이지만, 매번 직접 구현하려면 시간이 들고 실수하기 쉽습니다. 이 글에서는 무료 온라인 도구 **WooaDev**를 활용해 누구나 30초 만에 debounce와 throttle을 적용하는 방법을 알려드립니다.
 
 ## WooaDev: JavaScript debounce throttle 무료 도구 소개
