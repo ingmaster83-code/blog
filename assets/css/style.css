@@ -246,6 +246,13 @@ img { max-width: 100%; height: auto; }
   color: var(--border);
   cursor: default;
 }
+.pagination .pg-ellipsis {
+  border: none;
+  min-width: auto;
+  height: auto;
+  padding: 0 2px;
+  color: var(--border);
+}
 
 /* ===== Post Detail ===== */
 .post-header {

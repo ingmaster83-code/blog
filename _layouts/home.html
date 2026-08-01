@@ -45,15 +45,32 @@ layout: default
   <span class="disabled">&laquo; 이전</span>
   {% endif %}
 
-  {% for page_num in (1..paginator.total_pages) %}
-    {% if page_num == paginator.page %}
-    <span class="current">{{ page_num }}</span>
-    {% elsif page_num == 1 %}
-    <a href="{{ '/' | relative_url }}">{{ page_num }}</a>
-    {% else %}
-    <a href="{{ site.paginate_path | replace: ':num', page_num | relative_url }}">{{ page_num }}</a>
-    {% endif %}
-  {% endfor %}
+  {%- assign cur = paginator.page -%}
+  {%- assign total = paginator.total_pages -%}
+  {%- assign win_start = cur | minus: 2 -%}
+  {%- assign win_end = cur | plus: 2 -%}
+  {%- if win_start < 1 -%}{%- assign win_start = 1 -%}{%- endif -%}
+  {%- if win_end > total -%}{%- assign win_end = total -%}{%- endif -%}
+  {%- assign last_shown = 0 -%}
+  {%- for page_num in (1..total) -%}
+    {%- assign show_this = false -%}
+    {%- if page_num == 1 or page_num == total -%}{%- assign show_this = true -%}{%- endif -%}
+    {%- if page_num >= win_start and page_num <= win_end -%}{%- assign show_this = true -%}{%- endif -%}
+    {%- if show_this -%}
+      {%- assign gap = page_num | minus: last_shown -%}
+      {%- if last_shown != 0 and gap > 1 -%}
+      <span class="pg-ellipsis">…</span>
+      {%- endif -%}
+      {%- if page_num == cur -%}
+      <span class="current">{{ page_num }}</span>
+      {%- elsif page_num == 1 -%}
+      <a href="{{ '/' | relative_url }}">{{ page_num }}</a>
+      {%- else -%}
+      <a href="{{ site.paginate_path | replace: ':num', page_num | relative_url }}">{{ page_num }}</a>
+      {%- endif -%}
+      {%- assign last_shown = page_num -%}
+    {%- endif -%}
+  {%- endfor -%}
 
   {% if paginator.next_page %}
   <a href="{{ site.paginate_path | replace: ':num', paginator.next_page | relative_url }}">다음 &raquo;</a>
