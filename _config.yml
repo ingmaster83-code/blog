@@ -19,6 +19,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-feed
 
 paginate: 10
 paginate_path: "/page:num/"
@@ -43,3 +44,9 @@ exclude:
   - .gitignore
   - vendor/
   - __pycache__/
+  - naver_draft.py
+  - naver_state.json
+  - naver_drafts.json
+  - naver_images/
+  - naver_logs/
+  - .naver_profile/

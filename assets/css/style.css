@@ -506,3 +506,6 @@ img { max-width: 100%; height: auto; }
   .cta-title { font-size: 1.1rem; }
   .header-nav { display: none; }
 }
+
+/* 포스트 본문 이미지 (Kit 화면 캡처) */
+.post-body img { max-width: 100%; height: auto; border-radius: 10px; border: 1px solid #E5E7EB; margin: 8px 0 18px; display: block; }
